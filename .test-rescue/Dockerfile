@@ -18,4 +18,3 @@ RUN git clone https://x-access-token:${GITHUB_TOKEN}@github.com/${FULL_REPOSITOR
 RUN PATH="/usr/local/rvm/rubies/ruby-2.6.2/bin:$PATH" gem install rspec
 RUN cd rspec-core && PATH="/usr/local/rvm/rubies/ruby-2.6.2/bin:$PATH" bundle
 RUN rm -r rspec-core
-
