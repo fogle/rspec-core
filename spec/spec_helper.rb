@@ -1,4 +1,5 @@
 require 'rubygems' if RUBY_VERSION.to_f < 1.9
+require 'test-rescue-agent'
 
 require 'rspec/support/spec'
 
