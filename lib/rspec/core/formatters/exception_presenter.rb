@@ -85,7 +85,9 @@ module RSpec
             detail_formatter.call(example, colorizer),
             formatted_message_and_backtrace(colorizer),
             extra_detail_formatter.call(failure_number, colorizer),
-          ].compact.flatten
+          ]
+          p lines
+          lines = lines.compact.flatten
 
           lines = indent_lines(lines, failure_number)
           lines.unshift("")
@@ -240,6 +242,7 @@ module RSpec
           lines = colorized_message_lines(colorizer) + colorized_formatted_backtrace(colorizer)
           encoding = encoding_of("")
           lines.map do |line|
+            p [line, RSpec::Support::EncodedString.new(line, encoding)]
             RSpec::Support::EncodedString.new(line, encoding)
           end
         end
