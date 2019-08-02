@@ -28,6 +28,7 @@ module RSpec::Core
       let(:exception) { instance_double(Exception, :message => "Boom\nBam", :backtrace => [ "#{__FILE__}:#{line_num}"]) }
 
       it "formats the exception with all the normal details" do
+        raise "".encoding.inspect
         expect(presenter.fully_formatted(1)).to eq(<<-EOS.gsub(/^ +\|/, ''))
           |
           |  1) Example
