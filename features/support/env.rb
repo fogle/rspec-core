@@ -1,4 +1,5 @@
 require 'aruba/cucumber'
+require 'test-rescue-agent'
 
 Before do
   # Force ids to be printed unquoted for consistency
