@@ -66,6 +66,5 @@ gem 'test-unit', '~> 3.0' if RUBY_VERSION.to_f >= 2.2
 
 gem 'contracts', '< 0.16' if RUBY_VERSION < '1.9.0'
 gem 'test-rescue-agent', github: 'fogle/test-rescue-agent'
-gem 'httparty'
 
 eval File.read('Gemfile-custom') if File.exist?('Gemfile-custom')
