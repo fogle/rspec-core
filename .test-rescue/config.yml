@@ -1,3 +1,5 @@
+before_test:
+  - bundle install
 dependencies:
   yarn: latest
   ruby: 2.6.3
