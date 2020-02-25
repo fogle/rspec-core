@@ -34,10 +34,10 @@ end
 
 if RUBY_VERSION < '2.2.0' && !!(RbConfig::CONFIG['host_os'] =~ /cygwin|mswin|mingw|bccwin|wince|emx/)
   gem 'ffi', '< 1.10'
-elsif RUBY_VERSION < '1.9'
+elsif RUBY_VERSION < '2.0'
   gem 'ffi', '< 1.9.19' # ffi dropped Ruby 1.8 support in 1.9.19
 else
-  gem 'ffi', '~> 1.9.25'
+  gem 'ffi', '~> 1.11.0'
 end
 
 if RUBY_VERSION < '2.2.0' && !!(RbConfig::CONFIG['host_os'] =~ /cygwin|mswin|mingw|bccwin|wince|emx/)
@@ -63,6 +63,12 @@ if RUBY_VERSION >= '2.4' && RUBY_ENGINE == 'ruby'
 end
 
 gem 'test-unit', '~> 3.0' if RUBY_VERSION.to_f >= 2.2
+
+# Version 5.12 of minitest requires Ruby 2.4
+if RUBY_VERSION < '2.4.0'
+  gem 'minitest', '< 5.12.0'
+end
+
 
 gem 'contracts', '< 0.16' if RUBY_VERSION < '1.9.0'
 
