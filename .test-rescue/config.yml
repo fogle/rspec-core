@@ -2,4 +2,4 @@ before_test:
   - bundle install
 dependencies:
   yarn: latest
-  ruby-beta: 2.6.3
+  ruby: 2.6.3
